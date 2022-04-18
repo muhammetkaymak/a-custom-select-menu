@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #4285f4;
+}
+
+.Wrapper-selecBtn,
+.Wrapper-content-options li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.Wrapper {
+  width: 370px;
+  margin: 130px auto 0;
+}
+
+.Wrapper.active .Wrapper-content {
+  display: block;
+}
+
+.Wrapper.active .Wrapper-selectBtn i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.Wrapper-selectBtn {
+  height: 65px;
+  font-size: 22px;
+  background-color: #fff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Wrapper-selectBtn i {
+  font-size: 31px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+
+.Wrapper-content {
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.Wrapper-content-search {
+  position: relative;
+}
+
+.Wrapper-content-search i {
+  position: absolute;
+  left: 15px;
+  line-height: 53px;
+  font-size: 20px;
+  color: #999;
+}
+
+.Wrapper-content-search input {
+  height: 53px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  padding: 0 15px 0 43px;
+  border-radius: 5px;
+  border: 1px solid #b3b3b3;
+}
+
+.Wrapper-content-options {
+  margin-top: 10px;
+  max-height: 250px;
+  overflow: auto;
+  padding-right: 7px;
+}
+
+.Wrapper-content-options::-webkit-scrollbar {
+  width: 7px;
+}
+
+.Wrapper-content-options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.Wrapper-content-options::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 25px;
+}
+
+.Wrapper-content-options li {
+  height: 50px;
+  padding: 0px 13px;
+  font-size: 21px;
+  border-radius: 5px;
+}
+
+.Wrapper-content-options li:hover {
+  background-color: #f2f2f2;
+}
+
+.Wrapper-content-options li.selected {
+  background-color: #f2f2f2;
+}
+/*# sourceMappingURL=style.css.map */

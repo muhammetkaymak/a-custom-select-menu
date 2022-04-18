@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+$color-bg: #4285f4;
+$color-border: #b3b3b3;
+$color-gray: #999;
+$color-option-bg: #f2f2f2;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: $color-bg;
+}
+
+.Wrapper-selecBtn,
+.Wrapper-content-options li {
+    display: flex;
+    cursor: pointer;
+}
+
+.Wrapper {
+    width: 370px;
+    margin: 130px auto 0;
+    
+    &.active {
+        .Wrapper {
+            &-content{
+                display: block;
+            }//-content
+            &-selectBtn{
+                i{
+                    transform: rotate(-180deg);
+                }//i
+            }//-selectBtn
+        }//.Wrapper
+    }//.active
+
+    &-selectBtn {
+        height: 65px;
+        font-size: 22px;
+        background-color: #fff;
+        cursor: pointer;
+        display: flex;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 7px;
+        align-items: center;
+        justify-content: space-between;
+
+        i {
+            font-size: 31px;
+            transition: transform 0.3s linear;
+        } //i
+    } //-selectBtn
+
+    &-content {
+        display: none;
+        padding: 20px;
+        margin-top: 15px;
+        border-radius: 7px;
+        background: #fff;
+
+        &-search {
+            position: relative;
+
+            i {
+                position: absolute;
+                left: 15px;
+                line-height: 53px;
+                font-size: 20px;
+                color: $color-gray;
+            } //i
+
+            input {
+                height: 53px;
+                width: 100%;
+                outline: none;
+                font-size: 17px;
+                padding: 0 15px 0 43px;
+                border-radius: 5px;
+                border: 1px solid $color-border;
+            } //input
+        } //-search
+
+        &-options {
+            margin-top: 10px;
+            max-height: 250px;
+            overflow: auto;
+            padding-right: 7px;
+
+            &::-webkit-scrollbar {
+                width: 7px;
+
+                &-track {
+                    background: #f1f1f1;
+                    border-radius: 25px;
+                } //-track
+
+                &-thumb {
+                    background: #ccc;
+                    border-radius: 25px;
+                } //-thumb
+            } //::-webkit-scrollbar
+
+            li {
+                height: 50px;
+                padding: 0px 13px;
+                font-size: 21px;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $color-option-bg;
+                } //:hover
+                &.selected{
+                    background-color: $color-option-bg;
+                }//.selected
+            } //li
+        } //-option
+    } //-content
+} //.Wrapper
